@@ -1,6 +1,8 @@
 # ShowKart
 
-A local concert ticket booking prototype for a college demonstration. See **DEMO_GUIDE.md** for demo accounts and a presentation walkthrough.
+A concert ticket booking application for a college demonstration. See **DEMO_GUIDE.md** for demo accounts and a presentation walkthrough.
+
+GitHub Pages: https://maheshc335591-cmyk.github.io/ShowKarts2s/ . The hosted version stores demo data in each visitor's browser. See **DEPLOYMENT.md** for its limits, publishing workflow, and custom-domain setup. The local Python-backed version below remains available.
 
 ## Run on this computer
 
@@ -66,4 +68,4 @@ The workspace config points Pyrefly at the project virtual environment. frontend
 
 ## GitHub preparation
 
-The .gitignore excludes installed dependencies, frontend build output, Python caches, environment files, and the local SQLite database. Keep the database on your computer; a fresh setup creates its own demo accounts and bookings. GitHub authentication and publishing have been deferred.
+The .gitignore excludes installed dependencies, frontend build output, Python caches, environment files, and the local SQLite database. Keep the database on your computer; a fresh setup creates its own demo accounts and bookings. The public repository is named ShowKarts2s; pushes to main deploy the browser demo through GitHub Actions.

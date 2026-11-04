@@ -34,6 +34,8 @@ Browser coverage includes all main public/guarded routes; desktop and 390×844 m
 
 ## Running the checks
 
+GitHub Pages follow-up: four additional static-preview Chromium scenarios pass without a backend. They cover the project subpath, refreshed hash routes, logo/favicon loading, fan seat booking and simulated payment, retained QR tickets, cancellation, all administrator tabs, event edits retained after reload, registration, saved wishlists, and simulated password recovery. Frontend lint, types, formatting and the Pages production build pass. These checks validate browser-local demo behavior; they do not imply shared inventory or secure server authentication. See DEPLOYMENT.md.
+
 Install the requirements in backend/requirements-dev.txt and run npm ci --prefix frontend. Install Chromium once with:
 
     npm --prefix frontend exec -- playwright install chromium

@@ -142,6 +142,12 @@ export default function Footer() {
             </Button>
           </form>
           <p className="mt-3 text-xs text-slate-500">No real emails are sent.</p>
+          {import.meta.env.VITE_DEMO_MODE === "true" && (
+            <p className="mt-3 text-xs text-slate-500">
+              Browser demo: accounts, bookings and admin changes are saved only on this device. Use
+              sample details and a password you do not use elsewhere.
+            </p>
+          )}
         </div>
       </div>
       <div className="border-t border-white/5 py-5 text-center text-xs text-slate-500">

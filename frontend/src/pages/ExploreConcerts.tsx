@@ -1,3 +1,4 @@
+import { assetUrl } from "@/lib/assets";
 import { useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
@@ -17,7 +18,7 @@ import ConcertCard from "@/components/ConcertCard";
 import { apiGet } from "@/lib/api";
 import type { Concert, MetaInfo } from "@/lib/types";
 
-const BANNER = "/demo-media/image-36c9961575ec.jpg";
+const BANNER = assetUrl("/demo-media/image-36c9961575ec.jpg");
 
 export default function ExploreConcerts() {
   const [params] = useSearchParams();

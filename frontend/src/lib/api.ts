@@ -26,6 +26,10 @@ export class ApiError extends Error {
 type JsonBody = unknown;
 
 async function request<T>(method: string, path: string, body?: JsonBody): Promise<T> {
+  if (import.meta.env.VITE_DEMO_MODE === "true") {
+    const { demoRequest } = await import("./demo-api");
+    return demoRequest<T>(method, path, body);
+  }
   // Auth rides the httpOnly session cookie automatically — never add auth headers here.
   const res = await fetch(`${BASE}${path}`, {
     method,

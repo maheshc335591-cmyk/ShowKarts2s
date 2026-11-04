@@ -1,5 +1,5 @@
 import BrandLogo from "@/components/BrandLogo";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { QRCodeSVG } from "qrcode.react";
 import {
@@ -18,6 +18,7 @@ import { fmtDateTime, inr } from "@/lib/format";
 import type { Booking } from "@/lib/types";
 
 export default function ETicket() {
+  const navigate = useNavigate();
   const { bookingId } = useParams<{ bookingId: string }>();
   const [params] = useSearchParams();
   const from = params.get("from");
@@ -72,7 +73,7 @@ export default function ETicket() {
             <Button
               variant="outline"
               className="border-white/15 text-slate-300"
-              onClick={() => (window.location.href = "/dashboard?tab=tickets")}
+              onClick={() => navigate("/dashboard?tab=tickets")}
               data-testid="ticket-dashboard-button"
             >
               My tickets

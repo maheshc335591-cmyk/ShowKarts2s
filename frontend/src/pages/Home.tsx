@@ -1,3 +1,4 @@
+import { assetUrl } from "@/lib/assets";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
@@ -29,8 +30,8 @@ import { apiGet } from "@/lib/api";
 import { fmtDate, inr } from "@/lib/format";
 import type { Artist, Concert, MetaInfo } from "@/lib/types";
 
-const HERO_BG = "/demo-media/image-9fd46dd2c605.jpg";
-const OFFER_BG = "/demo-media/image-36c9961575ec.jpg";
+const HERO_BG = assetUrl("/demo-media/image-9fd46dd2c605.jpg");
+const OFFER_BG = assetUrl("/demo-media/image-36c9961575ec.jpg");
 
 export default function Home() {
   const navigate = useNavigate();

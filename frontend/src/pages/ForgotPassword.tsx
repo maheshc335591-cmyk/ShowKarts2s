@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { Info, KeyRound, Loader2, MailQuestion } from "lucide-react";
@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { apiPost } from "@/lib/api";
 
 export default function ForgotPassword() {
+  const navigate = useNavigate();
   const [step, setStep] = useState<1 | 2>(1);
   const [email, setEmail] = useState("");
   const [code, setCode] = useState("");
@@ -37,7 +38,7 @@ export default function ForgotPassword() {
       }),
     onSuccess: (res) => {
       toast.success(res.message);
-      window.location.href = "/login";
+      navigate("/login");
     },
     onError: (e) => toast.error(e instanceof Error ? e.message : "Reset failed"),
   });

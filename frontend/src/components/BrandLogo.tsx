@@ -1,8 +1,9 @@
+import { assetUrl } from "@/lib/assets";
 export default function BrandLogo() {
   return (
     <span className="inline-flex shrink-0 items-center gap-2.5">
       <img
-        src="/showkart-mark.svg"
+        src={assetUrl("/showkart-mark.svg")}
         alt=""
         width={48}
         height={48}

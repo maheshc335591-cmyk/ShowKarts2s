@@ -7,6 +7,7 @@ import tailwindcss from "@tailwindcss/vite";
 const frontendDir = fileURLToPath(new URL(".", import.meta.url));
 
 export default defineConfig({
+  base: process.env.VITE_BASE_PATH || "/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: [{ find: "@", replacement: path.resolve(frontendDir, "src") }],

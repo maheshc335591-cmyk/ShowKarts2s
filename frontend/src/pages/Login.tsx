@@ -1,3 +1,4 @@
+import { assetUrl } from "@/lib/assets";
 import { useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
@@ -10,7 +11,7 @@ import { apiPost } from "@/lib/api";
 import { useSession } from "@/lib/session";
 import type { User } from "@/lib/types";
 
-const SIDE_IMG = "/demo-media/image-9fd46dd2c605.jpg";
+const SIDE_IMG = assetUrl("/demo-media/image-9fd46dd2c605.jpg");
 
 export default function Login() {
   const navigate = useNavigate();
