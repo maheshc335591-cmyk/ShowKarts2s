@@ -1,0 +1,17 @@
+{
+  "name": "showkart-college-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": ".venv\\Scripts\\python.exe scripts/run_demo.py",
+    "dev": "npm run build && npm start",
+    "build": "npm --prefix frontend run build",
+    "lint": "npm --prefix frontend run lint && .venv\\Scripts\\python.exe -m ruff check backend scripts tests",
+    "format": "npm --prefix frontend run format && .venv\\Scripts\\python.exe -m ruff format backend scripts tests",
+    "check": "npm --prefix frontend run check && .venv\\Scripts\\python.exe -m ruff check backend scripts tests && .venv\\Scripts\\python.exe -m ruff format --check backend scripts tests && .venv\\Scripts\\python.exe -m pyrefly check",
+    "smoke": ".venv\\Scripts\\python.exe scripts/smoke_demo.py",
+    "test:api": ".venv\\Scripts\\python.exe -m unittest discover -s tests -p test_*.py -v",
+    "test:e2e": "npm --prefix frontend run test:e2e --",
+    "test": "npm run test:api && npm run build && npm run test:e2e"
+  }
+}

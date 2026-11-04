@@ -1,0 +1,33 @@
+# Installed dependencies and builds
+.venv/
+node_modules/
+frontend/dist/
+
+# Python caches and local tooling
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.pytest_cache/
+.pyrefly_cache/
+*.tsbuildinfo
+
+# Local application data and secrets
+*.sqlite3
+*.sqlite3-*
+.env
+.env.*
+!.env.example
+*.log
+
+# Editor and operating-system files
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Local recovery archives must never be published
+recovery/
+
+# Browser test artifacts
+test-results/
+playwright-report/
