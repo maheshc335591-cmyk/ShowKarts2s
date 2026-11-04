@@ -1,6 +1,6 @@
 # GitHub Pages demo
 
-Public URL: https://maheshc335591-cmyk.github.io/ShowKarts2s/
+Public URL: https://showkarts2s.github.io/
 
 The Pages workflow builds the frontend with `VITE_DEMO_MODE=true`. The Python backend remains available for local use; Pages uses a separate browser adapter. Accounts, password verifiers, event edits, wishlists, and bookings are stored in this browser's local storage. The active demo session is stored in session storage. Clearing site data resets the sample catalogue and demo accounts. Data is not shared between visitors, devices, or browser profiles. Client-side administrator controls are presentation controls, not a security boundary. Use sample personal details and disposable passwords. Payments and QR entry are simulations.
 
